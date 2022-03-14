@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'online-retail-shop';
+
+  togNav(nav:any){
+    if(nav.opened){
+      nav.close();
+    }
+    else{
+      nav.open();
+    }
+
+  }
 }

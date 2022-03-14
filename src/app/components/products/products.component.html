@@ -1,0 +1,12 @@
+
+<div class="product-page">
+    <div class="container">
+        <div class="card" *ngFor="let item of productData">
+            <p>Product name:{{item.productName}}</p>
+            <br>
+            <p>Quantity:{{item.availableQuantity}}</p>
+            <br>
+            <button mat-button>Add</button>
+        </div>
+    </div>
+</div>
