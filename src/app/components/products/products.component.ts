@@ -15,5 +15,9 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
 this.url.getpro().subscribe(url=>this.productData=url)
   }
-
+  // notnull():void{
+  //   if(this.productData.productName&& this.productData.availableQuantity)!=="")
+  //   {
+  //     productData;
+  //   }
 }

@@ -1,19 +1,14 @@
-<!-- 
-<div class="addProduct">
-  <h1>Add Product</h1>
-  <label for="addProduct"> Enter the Product </label>
-  <input #newItem placeholder="add a product" (keyup.enter)="addItem(newItem.value); newItem.value = ''"
-    class="text-input" id="addItemInput" />
 
-  <button mat-button class="btn-primary" (click)="addItem(newItem.value)">Add Product</button>
+
+<div class="addproduct">
+  <div class="row">
+    <br>
+    <form #f="ngForm" name="form"(ngSubmit)="onSubmit(f)">
+      <label> Enter the Product </label>
+      <input type="text" class="form-ctrl" #newItem/><br><br>
+  <label> Enter the Quantity </label>
+  <input type="text" class="form-ctrl" #newItem1/>
+  </form>
+  </div>
+<button mat-button class="btn-primary" (click)="addProduct(newItem.value,newItem1.value)">Add Product</button>
 </div>
-<form class="form">
-    <h1>Add Product</h1>
-    <mat-form-field class="formfill" appearance="fill">
-      <mat-label>Enter product Name</mat-label>
-     <input #newItem placeholder="add a product" (keyup.enter)="addItem(newItem.value); newItem.value = ''"
-    class="text-input" id="addItemInput" />
-
-  <button mat-button class="btn-primary" (click)="addItem(newItem.value)">Add Product</button>
-    </mat-form-field>
-</form> -->

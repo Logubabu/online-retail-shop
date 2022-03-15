@@ -1,10 +1,15 @@
-.product{
-    padding: 40px 0;
+.product-page,.container{
+    padding: 10px 0;
+    margin: 2px;
+    border: 2px;
 }
-.box{
-    height: 200px;
-    width: 125px;
-    padding: 20px;
+.card{
+    height: 250px;
+    width: 200px;
+    padding: 30px;
     border: 1px solid rgb(7, 7, 7);
     border-radius: 4px;
+    float: left;
+    box-sizing: border-box;
+    margin: 20px;
 }
