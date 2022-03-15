@@ -9,6 +9,7 @@ import { MatCardModule} from '@angular/material/card'
 import {MatFormFieldModule} from '@angular/material/form-field'
 import { MatDividerModule } from '@angular/material/divider';
 import{MatGridListModule}from '@angular/material/grid-list'
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [],
@@ -23,6 +24,7 @@ import{MatGridListModule}from '@angular/material/grid-list'
     MatFormFieldModule,
     MatDividerModule,
     MatGridListModule,
+    MatTableModule,
   ],
   exports:[
     MatToolbarModule,
@@ -34,6 +36,7 @@ import{MatGridListModule}from '@angular/material/grid-list'
     MatFormFieldModule,
     MatDividerModule,
     MatGridListModule,
+    MatTableModule,
   ]
 })
 export class MaterialModule { }

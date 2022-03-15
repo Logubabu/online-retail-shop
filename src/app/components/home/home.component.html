@@ -1,14 +1,12 @@
-
-
 <div class="addproduct">
   <div class="row">
     <br>
-    <form #f="ngForm" name="form"(ngSubmit)="onSubmit(f)">
+    <form [formGroup]="productForm" (ngSubmit)="submit()" >
       <label> Enter the Product </label>
-      <input type="text" class="form-ctrl" #newItem/><br><br>
-  <label> Enter the Quantity </label>
-  <input type="text" class="form-ctrl" #newItem1/>
-  </form>
+      <input type="text" formControlName="productName" class="form-ctrl"/><br><br>
+      <label> Enter the Quantity </label>
+      <input type="number" formControlName="availableQuantity" class="form-ctrl"/><br>
+      <button mat-button type="submit" class="btn-primary">Add Product</button>
+    </form>
   </div>
-<button mat-button class="btn-primary" (click)="addProduct(newItem.value,newItem1.value)">Add Product</button>
 </div>

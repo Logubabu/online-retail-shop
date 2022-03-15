@@ -8,16 +8,24 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class ProductsComponent implements OnInit {
 
+//   log = 0;
+//   showLog = false;
 
-  constructor(private url:ApiService) { }
-  productData:any=[]
+//   increment(){
+//        this.showLog = true;
+//        return this.log = this.log + 1;
+//   }
+//   decrement(){
+//     this.showLog = true;
+//     return this.log = this.log - 1;
+// }
+
+  constructor(private url: ApiService) { }
+  productData: any = []
 
   ngOnInit(): void {
-this.url.getpro().subscribe(url=>this.productData=url)
+    this.url.getpro().subscribe(url => this.productData = url)
+  
   }
-  // notnull():void{
-  //   if(this.productData.productName&& this.productData.availableQuantity)!=="")
-  //   {
-  //     productData;
-  //   }
+
 }

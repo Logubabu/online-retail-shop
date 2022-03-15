@@ -1,11 +1,9 @@
+import { UniqueSelectionDispatcher } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-
-// export class productData{
-//   productId:any;
-//   productName:string;
-//   availableQuantity:number;
-// }
+import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-home',
@@ -14,25 +12,28 @@ import { NgForm } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-  productData:any=[]
-  // productData:{
-  //   productId:any;
-  //   productName:string;
-  //   availableQuantity:number;
-  // }
+  constructor(
+    private url: ApiService,
+    public form:FormBuilder,
+    public router:Router
+    ) {  }
+
+  productForm !: FormGroup;
 
   ngOnInit(): void {
-  }
+    this.productForm =this.form.group({
+      productName: "",
+      productId: uuidv4(),
+      availableQuantity: '',
+    })
 
-  addProduct(insert: string,insert1:string) {
-    if(insert!=="")
-    this.productData.push({ id: this.productData.length,insert,insert1 })
-    console.warn(insert,insert1)
   }
-
-  onSubmit(form:NgForm):void{
-    console.log(form.value)
+  submit() {
+    {
+      this.url.create(this.productForm.value).subscribe(res => {
+        //this.productForm.reset();
+        this.router.navigateByUrl('/products')
+      })
+    }
   }
- 
 }
