@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
   }
   submit() {
     {
-      this.url.placeorder(this.productForm.value).subscribe(res => {
+      this.url.create(this.productForm.value).subscribe(res => {
         //this.productForm.reset();
         this.router.navigateByUrl('/products')
       })
