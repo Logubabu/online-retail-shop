@@ -12,7 +12,7 @@
             <input type="text">
             <button mat-button><mat-icon>search</mat-icon></button>
         </button>
-        <button mat-icon-button class="carticon" matBadge={{getData.length}} matBadgeColor="warn">
+        <button mat-icon-button class="carticon" routerLink="cart" matBadge={{getData.length}} matBadgeColor="warn">
             <mat-icon>shopping_cart</mat-icon>
         </button>
     </mat-toolbar>
@@ -23,17 +23,18 @@
         <mat-nav-list style="width: 100%;">
 
             <a mat-list-item>
-                <button mat-icon-button routerLink="home">
+                <button mat-button routerLink="home">
                     <mat-icon>home</mat-icon>home
                 </button>
             </a>
             <a mat-list-item>
-                <button mat-icon-button routerLink="products">
+                <button mat-button routerLink="products">
                     <mat-icon>business_center</mat-icon>products
                 </button>
             </a>
+           
             <a mat-list-item>
-                <button mat-icon-button routerLink="cart">
+                <button mat-button routerLink="cart">
                     <mat-icon>shopping_cart</mat-icon>cart
                 </button>
             </a>

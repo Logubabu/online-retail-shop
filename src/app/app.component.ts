@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { storeData } from 'src/app/store';
-import { addData } from './Data';
+
 
 
 @Component({

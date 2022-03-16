@@ -24,7 +24,7 @@
   
     <tr mat-header-row ></tr>
     <tr mat-row ></tr>
-  </table> -->
+  </table>
 
 <table>
     <thead>
@@ -34,8 +34,36 @@
     </thead>
     <tbody></tbody>
     <tr>
-        <!-- <td>{{productId}}</td>
+        <td>{{productId}}</td>
         <td>{{productName}}</td>
-        <td>{{availableQuantity}}</td> -->
+        <td>{{availableQuantity}}</td>
     </tr>
+</table> -->
+
+<table mat-table [dataSource]="getData" class="mat-table">
+
+  <ng-container matColumnDef="productName">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let getData"> {{getData.productName}} </td>
+  </ng-container>
+
+ 
+  <ng-container matColumnDef="orderId">
+    <th mat-header-cell *matHeaderCellDef> Order Id </th>
+    <td mat-cell *matCellDef="let getData"> {{getData.orderId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="productId">
+    <th mat-header-cell *matHeaderCellDef> Product Id </th>
+    <td mat-cell *matCellDef="let getData"> {{getData.productId}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="availableQuantity">
+    <th mat-header-cell *matHeaderCellDef> Quantity </th>
+    <td mat-cell *matCellDef="let getData"> {{getData.availableQuantity}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

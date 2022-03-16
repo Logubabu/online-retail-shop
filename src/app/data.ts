@@ -1,3 +1,5 @@
-export interface addData{
-    item:any
+export interface getData{
+    productName:string,
+    productId:string,
+    availableQuantity:number,
 }
