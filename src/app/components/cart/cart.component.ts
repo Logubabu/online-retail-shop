@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
   }
   submit() {
     {
-      this.url.create(this.getData.value).subscribe(res => {
+      this.url.placeorder(this.getData.value).subscribe(res => {
         console.log(this.getData.value)
       })
     }
