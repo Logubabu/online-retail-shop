@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { storeData } from 'src/app/store';
+import { addData } from './Data';
 
 
 @Component({
@@ -8,6 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'online-retail-shop';
+
+  getData: any = storeData;
+
+  ngOnInit() {  }
 
   togNav(nav:any){
     if(nav.opened){

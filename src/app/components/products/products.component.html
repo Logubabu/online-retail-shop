@@ -7,15 +7,8 @@
                 <br>
                 <p>Quantity: {{item.availableQuantity}}</p>
                 <br>
-                <!-- <button mat-button (click)="increment()">
-                    <mat-icon>add</mat-icon>
-                        <p *ngIf="showLog">{{ log }}</p>  
-                </button>
-                <span>{{ log }}</span>
-                <button mat-button (click)="decrement()">
-                    <mat-icon>remove</mat-icon>
-                </button> -->
-                <button mat-button routerLink="/cart">Add to cart</button>
+                <button mat-button (click)="addcart(item)">Add to cart</button>
+                
             </div>
         </ng-container>
     </div>

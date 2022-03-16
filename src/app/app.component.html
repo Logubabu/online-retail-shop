@@ -1,49 +1,42 @@
-<!-- <header>
-    <div class="navbar bg-primary shadow-sm">
-        <div class="navbar-brand align-item-center d-flex">
-<i style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp;
-  <mat-icon>shopping_cart</mat-icon>  
-  <strong style="font-size: 30px;">L-kart</strong>
-</i>
-<div class="formgroup">
-    <input type="text" class="formctrl" placeholder="search product">
-</div>
-        </div>
-    </div>
-</header> -->
-
 <div class="navbarall">
-    <header>
-        <mat-toolbar-row class="navbar">
-            <button mat-icon-button (click)="togNav(sidenav)">
-                <mat-icon class="menuIcon">menu</mat-icon>&nbsp;<label>Menu</label>
-            </button>
-            <button mat-icon-button routerLink="home">
-                <mat-icon>home</mat-icon>home
-            </button>
-            <button mat-icon-button routerLink="products">
-                <mat-icon>business_center</mat-icon>products
-            </button>
-            <button mat-icon-button routerLink="cart">
-                <mat-icon>shopping_cart</mat-icon>cart
-            </button>
-            <button mat-icon-button>
-                    <mat-icon>search</mat-icon>search
-                </button>
-        </mat-toolbar-row>
-    </header>
-</div>  
+    <mat-toolbar class="navbar">
+        <button mat-icon-button (click)="togNav(sidenav)" class="menuicon">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span class="spanicon">
+            <mat-icon>shopping_cart</mat-icon>L-kart
+        </span>
+
+        <button mat-icon-button class="searchicon">
+            <input type="text">
+            <button mat-button><mat-icon>search</mat-icon></button>
+        </button>
+        <button mat-icon-button class="carticon" matBadge={{getData.length}} matBadgeColor="warn">
+            <mat-icon>shopping_cart</mat-icon>
+        </button>
+    </mat-toolbar>
+</div>
 
 <mat-sidenav-container>
     <mat-sidenav style="width: 12%; background-color: gray" #sidenav mode="side" closed class="vertical-menu">
         <mat-nav-list style="width: 100%;">
-            
-            
-<a mat-list-item>
-    <button mat-icon-button routerLink="home">
-        <mat-icon>home</mat-icon>home
-    </button>
-</a> 
+
+            <a mat-list-item>
+                <button mat-icon-button routerLink="home">
+                    <mat-icon>home</mat-icon>home
+                </button>
+            </a>
+            <a mat-list-item>
+                <button mat-icon-button routerLink="products">
+                    <mat-icon>business_center</mat-icon>products
+                </button>
+            </a>
+            <a mat-list-item>
+                <button mat-icon-button routerLink="cart">
+                    <mat-icon>shopping_cart</mat-icon>cart
+                </button>
+            </a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -52,6 +45,8 @@
         </p>
     </mat-sidenav-content>
 </mat-sidenav-container>
+
+
 <footer class="footer1">
     <mat-toolbar-row class="navbar"></mat-toolbar-row>
 </footer>

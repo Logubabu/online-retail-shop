@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { storeData } from 'src/app/store';
 
 @Component({
   selector: 'app-products',
@@ -8,24 +9,17 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class ProductsComponent implements OnInit {
 
-//   log = 0;
-//   showLog = false;
-
-//   increment(){
-//        this.showLog = true;
-//        return this.log = this.log + 1;
-//   }
-//   decrement(){
-//     this.showLog = true;
-//     return this.log = this.log - 1;
-// }
 
   constructor(private url: ApiService) { }
   productData: any = []
+  addData:any= storeData;
+
 
   ngOnInit(): void {
     this.url.getpro().subscribe(url => this.productData = url)
   
   }
-
+addcart(items:any){
+  this.addData.push(items)
+  }
 }
