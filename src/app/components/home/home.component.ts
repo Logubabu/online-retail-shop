@@ -1,6 +1,5 @@
-import { UniqueSelectionDispatcher } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup} from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { v4 as uuidv4 } from 'uuid';
@@ -30,7 +29,7 @@ export class HomeComponent implements OnInit {
   }
   submit() {
     {
-      this.url.create(this.productForm.value).subscribe(res => {
+      this.url.placeorder(this.productForm.value).subscribe(res => {
         //this.productForm.reset();
         this.router.navigateByUrl('/products')
       })
