@@ -28,9 +28,3 @@ export class CartComponent implements OnInit {
     }
   }
 }
-export interface getData {
-  productId: string;
-  position: number;
-  availableQuantity: number;
-  orderId: string;
-}

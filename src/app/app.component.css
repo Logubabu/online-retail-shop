@@ -26,6 +26,16 @@ header{
 strong{
     font-size: 30px;
 }
-.spanicon,.searchicon{
+.searchicon{
     flex: 1 1 auto;
   }
+.spanicon{
+    background-color: #fff;
+    height: 40px;
+    width: 150px;
+    border: 2px solid rgb(7, 7, 7);
+    border-radius: 2px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 30px;
+}
