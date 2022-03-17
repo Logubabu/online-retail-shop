@@ -15,6 +15,7 @@ export class CartComponent implements OnInit {
   getData: any = storeData;
 
   ngOnInit(): void {
+    console.log(storeData)
   }
   submit() {
     {

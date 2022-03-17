@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { getData } from '../data';
 
 
 @Injectable({
@@ -11,10 +13,10 @@ export class ApiService {
   baseurl="https://uiexercise.onemindindia.com/api/Product"
   baseurl2="https://uiexercise.onemindindia.com/api/OrderProducts"
   
-  getpro(){
-    return this.http.get(this.baseurl)
+  getpro():Observable<getData[]>{
+    return this.http.get<getData[]>(this.baseurl)
   }
-  create(data:any){
+  create(data:getData){
     return this.http.post(this.baseurl,data)
   }
 
