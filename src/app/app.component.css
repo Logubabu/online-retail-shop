@@ -31,6 +31,7 @@ strong{
   }
 .spanicon{
     background-color: #fff;
+    /* flex:auto; */
     height: 40px;
     width: 150px;
     border: 2px solid rgb(7, 7, 7);
@@ -38,4 +39,7 @@ strong{
     box-sizing: border-box;
     text-align: center;
     font-size: 30px;
+}
+.carticon{
+    margin-left: 50rem;
 }

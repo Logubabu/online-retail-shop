@@ -23,4 +23,3 @@ export class ApiService {
     return this.http.post(this.baseurl2,data)
   }
 }
-
